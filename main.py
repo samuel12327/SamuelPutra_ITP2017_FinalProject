@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from numpy import arange
 import time
-
 # Declares the Final Position of the Bead.
 # Declares All the Variables & the Dictionary of Places & their Respective Gravitational Acceleration
 planets = Planets()
@@ -35,6 +34,16 @@ def main():
                        "[2] RUN SIMULATION\n"
                        "[3] SHOW PLANET DETAILS\n"
                        "[4] EXIT\n")
+        try:
+            int(action)
+        except:
+            for i in planets_list:
+                print(i)
+            print(main_menu)
+            action = input("[1] ADD PLANET\n"
+                           "[2] RUN SIMULATION\n"
+                           "[3] SHOW PLANET DETAILS\n"
+                           "[4] EXIT\n")
 
         if action == "1":
             while True:

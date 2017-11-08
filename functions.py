@@ -82,7 +82,7 @@ def Parabola(x2, y2, N=100):
     y = F(x)
 
     # Calculate the time of travel by numerical integration.
-    # Print T(parabola) in 3 significant figures points.
+    # Print T(parabola) in 4 significant figures points.
     T = quad(Func, 0, x2, args=(F, Fp))[0]
     print('T(Parabola) = {:.4f}'.format(T))
     return x, y, T
